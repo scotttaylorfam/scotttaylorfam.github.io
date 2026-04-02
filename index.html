@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Audio Library</title>
+  <style>
+    :root{--bg:#0b1020;--card:#121a33;--text:#e8ecff;--muted:#a9b3d3;--accent:#7aa2ff;--line:#263253}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:linear-gradient(180deg,#0b1020,#0f1730);color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:48px 20px 64px}
+    .hero{padding:28px;background:rgba(18,26,51,.92);border:1px solid var(--line);border-radius:24px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    h1{margin:0 0 12px;font-size:clamp(2rem,4vw,3.2rem)} p{line-height:1.6;color:var(--muted);max-width:70ch}
+    a.btn{display:inline-block;margin-top:16px;padding:12px 18px;border-radius:999px;background:var(--accent);color:#081022;text-decoration:none;font-weight:700}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px}
+    .card{background:rgba(18,26,51,.88);border:1px solid var(--line);border-radius:20px;padding:18px}
+    .card h2{margin:0 0 10px;font-size:1.1rem}
+    .card ul{margin:0;padding-left:18px;color:var(--muted)}
+    code{background:#0a1228;padding:2px 6px;border-radius:6px;color:#dce6ff}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Audio Library</h1>
+      <p>This GitHub Pages site includes an audio subpage with 40 link placeholders. Put your audio files in the <code>audio/</code> folder and the links will work right away.</p>
+      <a class="btn" href="audio/index.html">Open Audio Subpage</a>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Folder layout</h2>
+        <ul>
+          <li><code>index.html</code></li>
+          <li><code>audio/index.html</code></li>
+          <li><code>audio/track-01.mp3</code> through <code>track-40.mp3</code></li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>Replace the files</h2>
+        <ul>
+          <li>Keep the same filenames, or edit the links in the audio page.</li>
+          <li>Use MP3, WAV, OGG, or whatever formats you prefer.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
