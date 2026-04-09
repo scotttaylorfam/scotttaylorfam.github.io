@@ -77,6 +77,34 @@
     .video-block:hover{
       transform:scale(1.05);
     }
+    /* ===== Mobile Optimization ===== */
+@media (max-width: 600px) {
+
+  .wrap{
+    padding: 18px 14px 40px;
+  }
+
+  h1{
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+
+  .list{
+    grid-template-columns: 1fr; /* stack everything */
+    gap: 12px;
+  }
+
+  .item{
+    padding: 16px;
+    border-radius: 14px;
+  }
+
+  .item a{
+    font-size: 1rem;
+    padding: 6px 0;
+  }
+
+}
   </style>
 </head>
 
