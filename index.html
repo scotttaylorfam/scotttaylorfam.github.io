@@ -50,33 +50,17 @@
       padding:14px 16px;
     }
 
-    .item a{
-      color:var(--text);
-      text-decoration:none;
-      font-weight:700;
-      display:block;
-    }
 
+     .item a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:700;
+  display:block;
+  padding:6px 0;
+}
     .item a:hover{color:var(--accent)}
 
-    .video-block{
-      display:inline-block;
-      width:300px;
-      margin:15px;
-      text-align:center;
-      text-decoration:none;
-      color:white;
-      transition:0.2s;
-    }
-
-    .video-block img{
-      width:100%;
-      border-radius:8px;
-    }
-
-    .video-block:hover{
-      transform:scale(1.05);
-    }
+    
     /* ===== Mobile Optimization ===== */
 @media (max-width: 600px) {
 
@@ -133,7 +117,14 @@
       --accent:#7aa2ff;
       --line:#263253;
     }
-
+.section-title{
+  grid-column:1/-1;
+  font-weight:700;
+  color:var(--muted);
+  margin-top:18px;
+  margin-bottom:4px;
+  font-size:1.1rem;
+}
     *{box-sizing:border-box}
 
     body{
@@ -157,10 +148,12 @@
     h1{margin:0;font-size:clamp(1.8rem,3vw,2.6rem)}
 
     .list{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:14px;
-    }
+      .list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
+}
+  
 
     .item{
       background:rgba(18,26,51,.92);
@@ -178,24 +171,7 @@
 
     .item a:hover{color:var(--accent)}
 
-    .video-block{
-      display:inline-block;
-      width:300px;
-      margin:15px;
-      text-align:center;
-      text-decoration:none;
-      color:white;
-      transition:0.2s;
-    }
-
-    .video-block img{
-      width:100%;
-      border-radius:8px;
-    }
-
-    .video-block:hover{
-      transform:scale(1.05);
-    }
+    
     /* ===== Mobile Optimization ===== */
 @media (max-width: 600px) {
 
@@ -222,7 +198,17 @@
     font-size: 1rem;
     padding: 6px 0;
   }
+.part{
+  font-weight:700;
+  margin-bottom:6px;
+}
 
+audio{
+  width:100%;
+  height:36px;
+}
+audio::-webkit-media-controls-panel {
+  border-radius: 10px;
 }
   </style>
 </head>
@@ -244,64 +230,241 @@
   <section class="list">
 
     <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">California Dreamin</div>
+    <div class="section-title">California Dreamin</div>
 
-    <div class="item"><a href="CaliforniaDreaminSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="CaliforniaDreaminAlto.mp3">Alto</a></div>
-    <div class="item"><a href="CaliforniaDreaminBaritone.mp3">Baritone</a></div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="CaliforniaDreaminSoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="CaliforniaDreaminAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Baritone</div>
+  <audio controls preload="none">
+    <source src="CaliforniaDreaminBaritone.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+   
+    <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
+    <div class="section-title">Don't Let the Rain Come Down</div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="Don't Let the Rain Come DownSoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+ <div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="Don't Let the Rain Come DownAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+   <div class="item">
+  <div class="part">Tenor</div>
+  <audio controls preload="none">
+    <source src="Don't Let the Rain Come DownTenor.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Bass</div>
+  <audio controls preload="none">
+    <source src="Don't Let the Rain Come DownBass.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+ 
 
     <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">Don't Let the Rain Come Down</div>
+    <div class="section-title">God Bless America</div>
 
-    <div class="item"><a href="DontLettheRainComeDownSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="DontLettheRainComeDownAlto.mp3">Alto</a></div>
-    <div class="item"><a href="DontLettheRainComeDownTenor.mp3">Tenor</a></div>
-    <div class="item"><a href="DontLettheRainComeDownBass.mp3">Bass</a></div>
+<div class="item">
+  <div class="part">Solo</div>
+  <audio controls preload="none">
+    <source src="GodBlessAmericaSolo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="GodBlessAmericaSoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="GodBlessAmericaAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Tenor</div>
+  <audio controls preload="none">
+    <source src="GodBlessAmericaTenor.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Bass</div>
+  <audio controls preload="none">
+    <source src="GodBlessAmericaBass.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+
 
     <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">God Bless America</div>
+    <div class="section-title">God Bless The USA</div>
 
-    <div class="item"><a href="GodBlessAmericaSolo.mp3">Solo</a></div>
-    <div class="item"><a href="GodBlessAmericaSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="GodBlessAmericaAlto.mp3">Alto</a></div>
-    <div class="item"><a href="GodBlessAmericaTenor.mp3">Tenor</a></div>
-    <div class="item"><a href="GodBlessAmericaBass.mp3">Bass</a></div>
+
+<div class="item">
+  <div class="part">Solo</div>
+  <audio controls preload="none">
+    <source src="GodBlesstheUSASolo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="GodBlesstheUSASoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="GodBlesstheUSAAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Tenor</div>
+  <audio controls preload="none">
+    <source src="GodBlesstheUSATenor.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Bass</div>
+  <audio controls preload="none">
+    <source src="GodBlesstheUSABass.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
     <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">God Bless The USA</div>
-
-    <div class="item"><a href="GodBlesstheUSASolo.mp3">Solo</a></div>
-    <div class="item"><a href="GodBlesstheUSASoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="GodBlesstheUSAAlto.mp3">Alto</a></div>
-    <div class="item"><a href="GodBlesstheUSATenor.mp3">Tenor</a></div>
-    <div class="item"><a href="GodBlesstheUSABass.mp3">Bass</a></div>
+    <div class="section-title">I Hope You Dance</div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="IHopeYouDanceSoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="IHopeYouDanceAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Baritone</div>
+  <audio controls preload="none">
+    <source src="IHopeYouDanceBaritone.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
     <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">I Hope You Dance</div>
+    <div class="section-title">Lida Rose</div>
+<div class="item">
+  <div class="part">Solo</div>
+  <audio controls preload="none">
+    <source src="LidaRoseSolo.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Soprano</div>
+  <audio controls preload="none">
+    <source src="LidaRoseSoprano.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Alto</div>
+  <audio controls preload="none">
+    <source src="LidaRoseAlto.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Tenor</div>
+  <audio controls preload="none">
+    <source src="LidaRoseTenor.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div><div class="item">
+<div class="item">
+  <div class="part">Bass</div>
+  <audio controls preload="none">
+    <source src="LidaRoseBass.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div><div class="item">
 
-    <div class="item"><a href="IHopeYouDanceSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="IHopeYouDanceAlto.mp3">Alto</a></div>
-    <div class="item"><a href="IHopeYouDanceBaritone.mp3">Baritone</a></div>
-
-    <div style="grid-column:1/-1;border-top:1px solid var(--line);margin:10px 0;"></div>
-    <div style="grid-column:1/-1;font-weight:700;color:var(--muted);">Lida Rose</div>
-
-    <div class="item"><a href="LidaRoseSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="LidaRoseTenor.mp3">Tenor</a></div>
-    <div class="item"><a href="LidaRoseAlto.mp3">Alto</a></div>
-    <div class="item"><a href="LidaRoseBass.mp3">Bass</a></div>
-
+<div class="item">
+  <div class="part">Tenor Quartet</div>
+  <audio controls preload="none">
+    <source src="LidaRoseTenorQuartet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">LeadQuartet</div>
+  <audio controls preload="none">
+    <source src="LidaRoseLeadQuartet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Baritone Quartet</div>
+  <audio controls preload="none">
+    <source src="LidaRoseBaritoneQuartet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div class="item">
+  <div class="part">Bass Quartet</div>
+  <audio controls preload="none">
+    <source src="LidaRoseBassQuartet.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+</div>
   </section>
 
 </main>
 
 </body>
 </html>
-    <div class="item"><a href="LidaRoseSoprano.mp3">Soprano</a></div>
-    <div class="item"><a href="LidaRoseTenor.mp3">Tenor</a></div>
-    <div class="item"><a href="LidaRoseAlto.mp3">Alto</a></div>
-    <div class="item"><a href="LidaRoseBass.mp3">Bass</a></div>
 
+
+  
   </section>
 
 </main>
